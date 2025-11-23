@@ -1,26 +1,22 @@
 import random
 import re
+import os
+import sys
 from datetime import datetime, timedelta
 import json
 import mysql.connector
 from mysql.connector import Error
 from typing import Dict, List, Optional, Tuple
 
-from generate_edi_data import HEALTH_PLANS, generate_id, person
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
 
-# 数据库配置
-# DB_CONFIG = {
-#     'host': 'insurance.cpy2e6qoaeck.ap-southeast-2.rds.amazonaws.com',
-#     'database': 'insurance',
-#     'user': 'root',
-#     'password': 'Insurance_2025'
-# }
-DB_CONFIG = {
-    'host': '192.168.10.20',
-    'database': 'insurance',
-    'user': 'root',
-    'password': '123456'
-}
+from config.config import DB_CONFIG
+from src.edi.generator import HEALTH_PLANS, generate_id
+from mimesis import Person
+
+person = Person('en')
 
 
 class EDIParser:
@@ -1088,9 +1084,10 @@ def main():
         parser.connect_db()
 
         # 解析EDI文件
-        parser.parse_edi_834('edi_834_large_sample.txt')
-        parser.parse_edi_837('edi_837_large_sample.txt')
-        parser.parse_edi_835('edi_835_large_sample.txt')
+        from config.config import SAMPLES_DIR
+        parser.parse_edi_834(os.path.join(SAMPLES_DIR, 'edi_834_large_sample.txt'))
+        parser.parse_edi_837(os.path.join(SAMPLES_DIR, 'edi_837_large_sample.txt'))
+        parser.parse_edi_835(os.path.join(SAMPLES_DIR, 'edi_835_large_sample.txt'))
 
     except Exception as e:
         print(f"发生错误: {e}")

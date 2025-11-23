@@ -141,7 +141,9 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-*.txt
-!requirements.txt
-!README.txt
+# Keep sample files but ignore generated output
+data/output/*
+!data/output/.gitkeep
+data/samples/*.txt
+!data/samples/.gitkeep
 

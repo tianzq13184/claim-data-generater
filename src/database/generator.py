@@ -1,27 +1,21 @@
 import random
 import string
 import json
+import os
+import sys
 from datetime import datetime, timedelta
-import pymysql
 from faker import Faker
 import mysql.connector
 from mysql.connector import Error
+
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
+
+from config.config import DB_CONFIG
+
 # Initialize Faker for realistic data generation
 fake = Faker()
-
-# Database connection configuration
-# DB_CONFIG = {
-#     'host': 'insurance.cpy2e6qoaeck.ap-southeast-2.rds.amazonaws.com',
-#     'database': 'insurance',
-#     'user': 'root',
-#     'password': 'Insurance_2025'
-# }
-DB_CONFIG = {
-    'host': '192.168.10.20',
-    'database': 'insurance',
-    'user': 'root',
-    'password': '123456'
-}
 
 def generate_random_id(prefix, length=8):
     """Generate a random ID with given prefix and length"""

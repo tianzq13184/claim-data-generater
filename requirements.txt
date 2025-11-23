@@ -1,0 +1,5 @@
+faker>=24.0.0
+mimesis>=18.0.0
+mysql-connector-python>=9.0.0
+numpy>=1.20.0
+
