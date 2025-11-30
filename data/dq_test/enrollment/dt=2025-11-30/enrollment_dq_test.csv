@@ -1,0 +1,11 @@
+member_id,subscriber_id,policy_number,ssn,last_name,first_name,middle_initial,date_of_birth,gender,street_address,city,state,zip_code,country,phone,email,coverage_status,medicare_plan,plan_id,plan_name,plan_type,effective_date,termination_date,termination_reason,relationship_code,transaction_type,action_code,sponsor_id,insurance_line
+MBR001,MBR001,POL001,123-45-6789,Smith,John,,1985-03-15,M,123 Main St,New York,NY,10001,US,555-1234,john@example.com,A,,DH-P3678B,Gold Plan,PPO,2024-01-01,,,18,021,2,SPON001,HLT
+MBR002,MBR002,POL002,234-56-7890,Johnson,Jane,,1990-07-20,F,456 Oak Ave,Los Angeles,CA,90001,US,555-2345,jane@example.com,A,,DH-P3156C,Silver Plan,HMO,2024-02-15,,,18,021,2,SPON001,HLT
+,MBR003,POL003,345-67-8901,Williams,Bob,,1975-11-08,M,789 Pine Rd,Chicago,IL,60601,US,555-3456,bob@example.com,A,,DH-P8768B,Bronze Plan,HDHP,2024-03-01,,,18,021,2,SPON001,HLT
+MBR004,MBR004,POL004,456-78-9012,Brown,Alice,,,X,321 Elm St,Houston,TX,77001,US,555-4567,alice@example.com,A,,DH-P3678B,Gold Plan,PPO,2024-01-15,,,18,021,2,SPON001,HLT
+MBR005,MBR005,POL005,567-89-0123,Davis,Charlie,,1988-05-25,M,654 Birch Ln,Phoenix,AZ,85001,US,555-5678,charlie@example.com,A,,DH-P3091B,Platinum Plan,EPO,,,,18,021,2,SPON001,HLT
+MBR006,MBR006,POL006,678-90-1234,Miller,Diana,,1992-09-10,F,987 Cedar Dr,Philadelphia,PA,19101,US,555-6789,diana@example.com,T,,DH-P3678B,Gold Plan,PPO,2024-01-01,2023-06-01,Voluntary termination,18,021,2,SPON001,HLT
+MBR007,MBR007,POL007,789-01-2345,Wilson,Eve,,1980-12-30,F,147 Maple Way,San Antonio,TX,78201,US,555-7890,eve@example.com,A,,DH-P3156C,Silver Plan,HMO,2024-04-01,,,18,021,2,SPON001,HLT
+MBR008,MBR008,POL008,890-12-3456,Moore,Frank,,1995-02-14,M,258 Spruce Ave,San Diego,CA,92101,US,555-8901,frank@example.com,A,,DH-P8768B,Bronze Plan,HDHP,2024-05-01,,,18,021,2,SPON001,HLT
+MBR009,MBR009,POL009,901-23-4567,Taylor,Grace,,2000-06-18,F,369 Walnut St,Dallas,TX,75201,US,555-9012,grace@example.com,A,,DH-P3091B,Platinum Plan,EPO,2024-06-01,,,18,021,2,SPON001,HLT
+MBR010,MBR010,POL010,012-34-5678,Anderson,Henry,,1978-08-22,M,480 Ash Blvd,San Jose,CA,95101,US,555-0123,henry@example.com,A,,DH-P3678B,Gold Plan,PPO,2024-07-01,,,18,021,2,SPON001,HLT
